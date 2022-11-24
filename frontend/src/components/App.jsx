@@ -130,6 +130,7 @@ function App() {
         setSignUp(!isSignUp);
         handleInfoPopupClick(!isInfoPopupOpen);
         localStorage.setItem('token', data.token);
+        api.getToken(data.token);
         history.push('/');
       })
       .catch((err) => {
